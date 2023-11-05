@@ -1,8 +1,5 @@
-document.ready$(function () {
+$(function () {
   const amenities = {};
-  const cities = {};
-  const states = {};
-
   $('li input[type=checkbox]').change(function () {
     if (this.checked) {
       amenities[this.dataset.name] = this.dataset.id;
