@@ -19,7 +19,7 @@ $(function () {
   });
   // Search places
   const url2 = 'http://0.0.0.0:5001/api/v1/places_search/';
-  $.post({
+  const objData = {
     url: url2,
     headers: {
       'Content-Type': 'application/json'
@@ -45,5 +45,11 @@ $(function () {
         $('section.places').append(elem);
       }
     }
+  };
+  $.post(objData);
+
+  $('section.filters button[type="button"]').on('click', function () {
+    objData.data = JSON.stringify({ amenities: Object.keys(amenities) });
+    $.post(objData);
   });
 });
