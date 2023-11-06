@@ -1,4 +1,4 @@
-document.ready$(function () {
+$(function () {
   const amenities = {};
   const cities = {};
   const states = {};
@@ -55,4 +55,8 @@ document.ready$(function () {
     objData.data = JSON.stringify({ amenities: Object.keys(amenities) });
     $.post(objData);
   });
+  // Your code should be here, thanks
+
+
+
 });

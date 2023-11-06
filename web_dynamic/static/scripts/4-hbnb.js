@@ -1,5 +1,6 @@
 $(function () {
   const amenities = {};
+  const urls = 'http://0.0.0.0:5001/api/v1/places_search/';
   $('li input[type=checkbox]').change(function () {
     if (this.checked) {
       amenities[this.dataset.name] = this.dataset.id;
