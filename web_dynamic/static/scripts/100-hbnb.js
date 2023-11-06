@@ -13,7 +13,6 @@ $(function () {
     $('.amenities h4').text(Object.keys(amenities).sort().join(', '));
   });
 
-
   // State listener
   $('li input#state_filter').change(function () {
     if (this.checked) {
@@ -24,7 +23,6 @@ $(function () {
     $('.locations h4').text(Object.keys(states).sort().join(', '));
   });
 
-
   // city listener
   $('li input#city_filter').change(function () {
     if (this.checked) {
@@ -34,7 +32,6 @@ $(function () {
     }
     $('.locations h4').text(Object.keys(cities).sort().join(', '));
   });
-
 
   // Update with status on screen
   const url = 'http://0.0.0.0:5001/api/v1/status/';
@@ -77,13 +74,12 @@ $(function () {
   };
   $.post(objData);
 
-
   // Make the request when the search button is clicked
   $('section.filters button[type="button"]').on('click', function () {
-    objData.data = JSON.stringify({ 
+    objData.data = JSON.stringify({
       amenities: Object.keys(amenities),
       cities: Object.keys(cities),
-      states: Object.keys(states),
+      states: Object.keys(states)
     });
     $.post(objData);
   });
