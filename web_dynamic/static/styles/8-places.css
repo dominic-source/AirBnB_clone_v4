@@ -1,3 +1,20 @@
+.reviews {
+    margin-top: 40px;
+}
+.reviews h2 {
+    font-size: 16px;
+    border-bottom: 1px #DDDDDD;
+}
+.reviews ul, .reviews li {
+    list-style: none;
+}
+.reviews ul li h3 {
+    font-size: 14px;
+}
+.reviews ul li p {
+    font-size: 12px;
+}   
+
 .places {
     column-count: 2;
     columns: 30em;
